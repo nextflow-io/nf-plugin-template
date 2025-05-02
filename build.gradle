@@ -1,0 +1,26 @@
+plugins {
+    id 'io.nextflow.nextflow-plugin' version '0.0.1-alpha3'
+}
+
+version = '0.1.0'
+
+nextflowPlugin {
+    nextflowVersion = '25.03.0-edge'
+
+    provider = 'nextflow'
+    className = 'nextflow.plugin.template.MyPlugin'
+    extensionPoints = [
+        'nextflow.plugin.template.MyFactory'
+    ]
+
+    publishing {
+        github {
+            repository = 'nextflow-io/nf-plugin-template'
+            userName = project.findProperty('github_username')
+            authToken = project.findProperty('github_access_token')
+            email = project.findProperty('github_commit_email')
+
+            indexUrl = 'https://github.com/nextflow-io/plugins/blob/main/plugins.json'
+        }
+    }
+}
