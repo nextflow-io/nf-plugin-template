@@ -27,11 +27,11 @@ class MyObserver implements TraceObserver {
 
     @Override
     void onFlowCreate(Session session) {
-        log.info "nf-plugin-template: Hello!"
+        log.info "Pipeline is starting! 🚀"
     }
 
     @Override
     void onFlowComplete() {
-        log.info "nf-plugin-template: Goodbye!"
+        log.info "Pipeline complete! 👋"
     }
 }
