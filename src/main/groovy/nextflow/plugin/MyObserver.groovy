@@ -14,19 +14,28 @@
  * limitations under the License.
  */
 
-package nextflow.plugin.template
+package nextflow.plugin
 
 import groovy.transform.CompileStatic
-import nextflow.plugin.BasePlugin
-import org.pf4j.PluginWrapper
+import groovy.util.logging.Slf4j
+import nextflow.Session
+import nextflow.trace.TraceObserver
 
 /**
- * The plugin entry point
+ * Implements an observer that allows implementing custom
+ * logic on nextflow execution events.
  */
+@Slf4j
 @CompileStatic
-class MyPlugin extends BasePlugin {
+class MyObserver implements TraceObserver {
 
-    MyPlugin(PluginWrapper wrapper) {
-        super(wrapper)
+    @Override
+    void onFlowCreate(Session session) {
+        log.info "Pipeline is starting! 🚀"
+    }
+
+    @Override
+    void onFlowComplete() {
+        log.info "Pipeline complete! 👋"
     }
 }

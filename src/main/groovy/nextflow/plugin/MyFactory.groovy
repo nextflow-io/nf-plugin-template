@@ -14,28 +14,23 @@
  * limitations under the License.
  */
 
-package nextflow.plugin.template
+package nextflow.plugin
 
 import groovy.transform.CompileStatic
-import groovy.util.logging.Slf4j
 import nextflow.Session
 import nextflow.trace.TraceObserver
+import nextflow.trace.TraceObserverFactory
 
 /**
- * Implements an observer that allows implementing custom
- * logic on nextflow execution events.
+ * Implements a factory object required to create
+ * the {@link MyObserver} instance.
  */
-@Slf4j
 @CompileStatic
-class MyObserver implements TraceObserver {
+class MyFactory implements TraceObserverFactory {
 
     @Override
-    void onFlowCreate(Session session) {
-        log.info "Pipeline is starting! 🚀"
+    Collection<TraceObserver> create(Session session) {
+        return List.<TraceObserver>of(new MyObserver())
     }
 
-    @Override
-    void onFlowComplete() {
-        log.info "Pipeline complete! 👋"
-    }
 }

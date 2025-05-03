@@ -8,9 +8,9 @@ nextflowPlugin {
     nextflowVersion = '25.03.0-edge'
 
     provider = 'nextflow'
-    className = 'nextflow.plugin.template.MyPlugin'
+    className = 'nextflow.plugin.MyPlugin'
     extensionPoints = [
-        'nextflow.plugin.template.MyFactory'
+        'nextflow.plugin.MyFactory'
     ]
 
     publishing {

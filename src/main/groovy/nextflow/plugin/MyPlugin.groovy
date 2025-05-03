@@ -14,23 +14,19 @@
  * limitations under the License.
  */
 
-package nextflow.plugin.template
+package nextflow.plugin
 
 import groovy.transform.CompileStatic
-import nextflow.Session
-import nextflow.trace.TraceObserver
-import nextflow.trace.TraceObserverFactory
+import nextflow.plugin.BasePlugin
+import org.pf4j.PluginWrapper
 
 /**
- * Implements a factory object required to create
- * the {@link MyObserver} instance.
+ * The plugin entry point
  */
 @CompileStatic
-class MyFactory implements TraceObserverFactory {
+class MyPlugin extends BasePlugin {
 
-    @Override
-    Collection<TraceObserver> create(Session session) {
-        return List.<TraceObserver>of(new MyObserver())
+    MyPlugin(PluginWrapper wrapper) {
+        super(wrapper)
     }
-
 }

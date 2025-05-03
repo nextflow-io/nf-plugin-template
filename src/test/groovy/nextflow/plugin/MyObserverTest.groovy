@@ -1,4 +1,4 @@
-package nextflow.plugin.template
+package nextflow.plugin
 
 import nextflow.Session
 import spock.lang.Specification
