@@ -1,8 +1,5 @@
 # nf-plugin-template plugin
 
-```bash
-nextflow run hello -plugins nf-plugin-template
-```
 
 ## Building
 
@@ -16,7 +13,7 @@ make assemble
 The plugin can be tested without a local Nextflow installation:
 
 1. Build and install the plugin to your local Nextflow installation: `make install`
-2. Run a pipeline with the plugin: `nextflow run ./my-script.nf -plugins nf-plugin-template@0.1.0`
+2. Run a pipeline with the plugin: `nextflow run hello -plugins nf-plugin-template@0.1.0`
 
 ## Publishing
 

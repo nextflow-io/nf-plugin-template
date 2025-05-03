@@ -7,10 +7,10 @@ version = '0.1.0'
 nextflowPlugin {
     nextflowVersion = '25.03.0-edge'
 
-    provider = 'nextflow'
-    className = 'nextflow.plugin.MyPlugin'
+    provider = 'acme'
+    className = 'acme.plugin.MyPlugin'
     extensionPoints = [
-        'nextflow.plugin.MyFactory'
+        'acme.plugin.MyFactory'
     ]
 
     publishing {

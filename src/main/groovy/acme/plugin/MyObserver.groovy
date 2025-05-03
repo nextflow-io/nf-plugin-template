@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nextflow.plugin
+package acme.plugin
 
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j

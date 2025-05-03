@@ -1,4 +1,4 @@
-package nextflow.plugin
+package acme.plugin
 
 import nextflow.Session
 import spock.lang.Specification
