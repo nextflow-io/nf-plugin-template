@@ -20,6 +20,9 @@ import groovy.transform.CompileStatic
 import nextflow.plugin.BasePlugin
 import org.pf4j.PluginWrapper
 
+/**
+ * The plugin entry point
+ */
 @CompileStatic
 class MyPlugin extends BasePlugin {
 

@@ -21,13 +21,16 @@ import nextflow.Session
 import nextflow.trace.TraceObserver
 import nextflow.trace.TraceObserverFactory
 
+/**
+ * Implements a factory object required to create
+ * the {@link MyObserver} instance.
+ */
 @CompileStatic
 class MyFactory implements TraceObserverFactory {
 
     @Override
     Collection<TraceObserver> create(Session session) {
-        final result = new ArrayList()
-        result.add( new MyObserver() )
-        return result
+        return List.<TraceObserver>of(new MyObserver())
     }
+
 }
