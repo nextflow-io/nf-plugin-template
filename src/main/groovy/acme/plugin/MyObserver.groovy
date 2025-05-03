@@ -31,11 +31,11 @@ class MyObserver implements TraceObserver {
 
     @Override
     void onFlowCreate(Session session) {
-        log.info "Pipeline is starting! 🚀"
+        println "Pipeline is starting! 🚀"
     }
 
     @Override
     void onFlowComplete() {
-        log.info "Pipeline complete! 👋"
+        println "Pipeline complete! 👋"
     }
 }
