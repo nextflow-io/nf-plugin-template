@@ -1,6 +1,5 @@
 # nf-plugin-template plugin
 
-
 ## Building
 
 To build the plugin:
@@ -17,17 +16,18 @@ The plugin can be tested without a local Nextflow installation:
 
 ## Publishing
 
-Follow these steps to publish the plugin:
+Plugins can be published to a central plugin registry to make them accessible to the Nextflow community. 
 
-1. In `build.gradle` make sure that
 
-    * `github.repository` matches the repository of the plugin
-    * `github.indexUrl` points to your fork of the plugins index repository.
+Follow these steps to publish the plugin to the Nextflow Plugin Registry:
 
-2. Create a file named `$HOME/.gradle/gradle.properties`, where $HOME is your home directory. Add the following properties:
+1. Create a file named `$HOME/.gradle/gradle.properties`, where $HOME is your home directory. Add the following properties:
 
-    * `github_username`: The GitHub username granting access to the plugin repository.
-    * `github_access_token`: The GitHub access token required to upload and commit changes to the plugin repository.
-    * `github_commit_email`: The email address associated with your GitHub account.
+    * `pluginRegistry.accessToken`: Your Nextflow Plugin Registry access token. 
 
-3. Use the following command to package and create a release for your plugin on GitHub: `make release`
+2. Use the following command to package and create a release for your plugin on GitHub: `make release`.
+
+
+> [!NOTE]
+> The Nextflow Pluging registry is currently avaialable as private beta technology. Contact info@nextflow.io to learn how to get access to it.
+> 
