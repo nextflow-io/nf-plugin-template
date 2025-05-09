@@ -5,11 +5,12 @@ plugins {
 version = '0.1.0'
 
 nextflowPlugin {
-    nextflowVersion = '25.03.0-edge'
+    nextflowVersion = '24.10.0'
 
     provider = 'acme'
     className = 'acme.plugin.MyPlugin'
     extensionPoints = [
+        'acme.plugin.MyExtension',
         'acme.plugin.MyFactory'
     ]
 
