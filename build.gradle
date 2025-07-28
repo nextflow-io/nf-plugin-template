@@ -1,5 +1,5 @@
 plugins {
-    id 'io.nextflow.nextflow-plugin' version '0.0.1-alpha6'
+    id 'io.nextflow.nextflow-plugin' version '0.0.1-alpha7'
 }
 
 version = '0.1.0'
