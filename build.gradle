@@ -1,5 +1,5 @@
 plugins {
-    id 'io.nextflow.nextflow-plugin' version '0.0.1-alpha7'
+    id 'io.nextflow.nextflow-plugin' version '1.0.0-beta.1'
 }
 
 version = '0.1.0'
@@ -16,8 +16,8 @@ nextflowPlugin {
 
     publishing {
         registry {
-            url = 'https://plugin-registry.dev-tower.net/api'
-            authToken = project.findProperty('pluginRegistry.accessToken')
+            url = project.findProperty('npr.apiUrl') ?: System.getenv('NPR_API_URL') ?: 'https://registry.nextflow/api'
+            authToken = project.findProperty('npr.apiKey') ?: System.getenv('NPR_API_KEY') ?: { throw new GradleException('npr.apiKey property or NPR_API_KEY environment variable must be set') }()
         }
     }
 }
