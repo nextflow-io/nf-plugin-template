@@ -7,7 +7,7 @@ version = '0.1.0'
 nextflowPlugin {
     nextflowVersion = '24.10.0'
 
-    provider = 'acme'
+    provider = 'provider-name'
     className = 'acme.plugin.MyPlugin'
     extensionPoints = [
         'acme.plugin.MyExtension',
