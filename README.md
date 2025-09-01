@@ -1,8 +1,20 @@
 # nf-plugin-template plugin
 
+## Creating your plugin
+
+The Nextflow plugin template is a scaffold for plugin development.
+The simplest way to create a new plugin is to use Nextflow to scaffold your files:
+
+```bash
+nextflow plugin create
+```
+
+See the [Nextflow documentation](https://www.nextflow.io/docs/latest/guides/gradle-plugin#gradle-plugin-create) for more details.
+
 ## Building
 
 To build the plugin:
+
 ```bash
 make assemble
 ```
@@ -22,12 +34,10 @@ Plugins can be published to a central plugin registry to make them accessible to
 Follow these steps to publish the plugin to the Nextflow Plugin Registry:
 
 1. Create a file named `$HOME/.gradle/gradle.properties`, where $HOME is your home directory. Add the following properties:
-
     * `npr.apiKey`: Your Nextflow Plugin Registry access token.
-
 2. Use the following command to package and create a release for your plugin on GitHub: `make release`.
 
 
 > [!NOTE]
 > The Nextflow Plugin registry is currently available as preview technology. Contact info@nextflow.io to learn how to get access to it.
-> 
+
