@@ -3,7 +3,9 @@
 ## Creating your plugin
 
 The Nextflow plugin template is a scaffold for plugin development.
-The simplest way to create a new plugin is to use Nextflow to scaffold your files:
+The simplest way to create a new plugin is to use the `nextflow plugin create` sub-command to create a plugin project based on the template.
+
+Create a new plugin with the following command:
 
 ```bash
 nextflow plugin create
