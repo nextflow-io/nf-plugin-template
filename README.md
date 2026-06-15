@@ -11,6 +11,11 @@ template. Out of the box it provides:
 
 Replace this section with a description of what your plugin actually does.
 
+Note: The **Summary**, **Get Started**, **Examples**, and **License** sections are
+mandatory: they are required by the Nextflow Registry, which uses this
+file as the plugin description. The **Plugin development** section below is
+guidance for working on the plugin and can be removed before publishing.
+
 ## Get Started
 
 Enable the plugin in your pipeline `nextflow.config`:
@@ -21,7 +26,7 @@ plugins {
 }
 ```
 
-Nextflow downloads the plugin from the Nextflow Plugin Registry the first time
+Nextflow downloads the plugin from the Nextflow Registry the first time
 the pipeline runs.
 
 ## Examples
@@ -65,14 +70,17 @@ The plugin can be tested without a local Nextflow installation:
 
 ### Publishing
 
-Plugins can be published to a central plugin registry to make them accessible to the Nextflow community.
+Plugins can be published to a central Nextflow registry to make them accessible to the Nextflow community.
 
-Follow these steps to publish the plugin to the Nextflow Plugin Registry:
+Follow these steps to publish the plugin to the Nextflow Registry:
 
 1. Create a file named `$HOME/.gradle/gradle.properties`, where `$HOME` is your home directory. Add the following properties:
-    * `npr.apiKey`: Your Nextflow Plugin Registry access token.
+    * `npr.apiKey`: Your Nextflow Registry access token.
 2. Package your plugin and publish it to the registry: `make release`.
 
 ## License
 
 Apache License 2.0. See the [`COPYING`](COPYING) file for details.
+
+Note: The above license is given for guidance only; however the Nextflow Registry
+requires the plugin to include an OSS (open source software) license.
