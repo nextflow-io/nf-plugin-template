@@ -1,21 +1,25 @@
+# Use the Gradle wrapper by default; override with e.g. `make GRADLE=gradle ...`
+# or `export GRADLE=gradle` (useful in pixi/conda environments).
+GRADLE ?= ./gradlew
+
 # Build the plugin
 assemble:
-	./gradlew assemble
+	$(GRADLE) assemble
 
 clean:
 	rm -rf .nextflow*
 	rm -rf work
 	rm -rf build
-	./gradlew clean
+	$(GRADLE) clean
 
 # Run plugin unit tests
 test:
-	./gradlew test
+	$(GRADLE) test
 
 # Install the plugin into local nextflow plugins dir
 install:
-	./gradlew install
+	$(GRADLE) install
 
 # Publish the plugin
 release:
-	./gradlew releasePlugin
+	$(GRADLE) releasePlugin
